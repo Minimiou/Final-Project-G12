@@ -34,7 +34,6 @@
             this.probarHappy = new System.Windows.Forms.ProgressBar();
             this.probarClean = new System.Windows.Forms.ProgressBar();
             this.btnFood = new System.Windows.Forms.Button();
-            this.btnGames = new System.Windows.Forms.Button();
             this.tmEggCrack = new System.Windows.Forms.Timer(this.components);
             this.btnClean = new System.Windows.Forms.Button();
             this.imgEgg = new System.Windows.Forms.PictureBox();
@@ -46,6 +45,7 @@
             this.imgReset = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btnGame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgEgg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOption1)).BeginInit();
@@ -99,22 +99,6 @@
             this.btnFood.TabIndex = 3;
             this.btnFood.Text = "Food";
             this.btnFood.UseVisualStyleBackColor = false;
-            // 
-            // btnGames
-            // 
-            this.btnGames.BackColor = System.Drawing.Color.LightBlue;
-            this.btnGames.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGames.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnGames.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.btnGames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGames.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGames.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnGames.Location = new System.Drawing.Point(157, 349);
-            this.btnGames.Name = "btnGames";
-            this.btnGames.Size = new System.Drawing.Size(84, 30);
-            this.btnGames.TabIndex = 4;
-            this.btnGames.Text = "Games";
-            this.btnGames.UseVisualStyleBackColor = false;
             // 
             // tmEggCrack
             // 
@@ -199,11 +183,12 @@
             this.imgReset.Size = new System.Drawing.Size(38, 32);
             this.imgReset.TabIndex = 12;
             this.imgReset.TabStop = false;
+            this.imgReset.Click += new System.EventHandler(this.imgReset_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Final_Project_G12.Properties.Resources.health;
-            this.pictureBox5.Location = new System.Drawing.Point(188, 47);
+            this.pictureBox5.Location = new System.Drawing.Point(187, 46);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(23, 20);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -213,12 +198,28 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Final_Project_G12.Properties.Resources.health;
-            this.pictureBox6.Location = new System.Drawing.Point(318, 47);
+            this.pictureBox6.Location = new System.Drawing.Point(318, 46);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(23, 20);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 14;
             this.pictureBox6.TabStop = false;
+            // 
+            // btnGame
+            // 
+            this.btnGame.BackColor = System.Drawing.Color.LightBlue;
+            this.btnGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGame.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGame.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGame.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnGame.Location = new System.Drawing.Point(157, 349);
+            this.btnGame.Name = "btnGame";
+            this.btnGame.Size = new System.Drawing.Size(84, 30);
+            this.btnGame.TabIndex = 15;
+            this.btnGame.Text = "Games";
+            this.btnGame.UseVisualStyleBackColor = false;
             // 
             // frmMain
             // 
@@ -228,6 +229,7 @@
             this.BackgroundImage = global::Final_Project_G12.Properties.Resources.frame;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(397, 460);
+            this.Controls.Add(this.btnGame);
             this.Controls.Add(this.imgPet);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -238,7 +240,6 @@
             this.Controls.Add(this.imgOption1);
             this.Controls.Add(this.imgBorder);
             this.Controls.Add(this.btnClean);
-            this.Controls.Add(this.btnGames);
             this.Controls.Add(this.btnFood);
             this.Controls.Add(this.probarClean);
             this.Controls.Add(this.probarHappy);
@@ -268,7 +269,6 @@
         private System.Windows.Forms.ProgressBar probarHappy;
         private System.Windows.Forms.ProgressBar probarClean;
         private System.Windows.Forms.Button btnFood;
-        private System.Windows.Forms.Button btnGames;
         private System.Windows.Forms.Button btnClean;
         private System.Windows.Forms.PictureBox imgEgg;
         private System.Windows.Forms.Timer tmEggCrack;
@@ -280,6 +280,7 @@
         private System.Windows.Forms.PictureBox imgReset;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button btnGame;
     }
 }
 

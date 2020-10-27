@@ -19,16 +19,19 @@ namespace Final_Project_G12
         int seconds = 0;
         int food;
         int cleanliness;
+        int xBorder = 417;
+        int yBorder = 503;
 
         Random petGen = new Random();
-        Random locationGen = new Random();
+
         int randopet;
-        int randoLocationNum;
+
+
+        private Random randoMovement;
 
         public frmMain()
         {
             InitializeComponent();
-            //location();
         }
 
 
@@ -39,34 +42,34 @@ namespace Final_Project_G12
             if (seconds == 8)
             {
                 imgEgg.Visible = false;
+                imgEgg.Enabled = false;
             }
-            randoLocationNum = (locationGen.Next(1));
 
+            randoMovement = new Random();
 
-            if (imgPet.Location.Y >= imgBorder.Location.Y)
+            int x = randoMovement.Next(0, 15);
+            int y = randoMovement.Next(0, 15);
+            imgPet.Top += y;
+            imgPet.Left += x;
+
+            if (imgPet.Bottom > yBorder)
             {
-                SuspendLayout();
-                imgPet.Location = new Point(imgPet.Location.Y - randoLocationNum);
-                ResumeLayout();
+                imgPet.Top -= y;
             }
-            else if (imgPet.Location.Y <= imgBorder.Location.Y)
+            else if(imgPet.Right > xBorder)
             {
-                SuspendLayout();
-                imgPet.Location = new Point(imgPet.Location.Y + randoLocationNum);
-                ResumeLayout();
+                imgPet.Left -= x;
             }
-            if (imgPet.Location.X >= imgBorder.Location.X)
+
+            if (imgPet.Top < 10)
             {
-                SuspendLayout();
-                imgPet.Location = new Point(imgPet.Location.X - randoLocationNum);//   , imgPet.Location.Y + randoLocationNum);
-                ResumeLayout();
+                imgPet.Top += y;
             }
-            else if (imgPet.Location.X <= imgBorder.Location.X)
+            else if (imgPet.Left < 10)
             {
-                SuspendLayout();
-                imgPet.Location = new Point(imgPet.Location.X + randoLocationNum);
-                ResumeLayout();
+                imgPet.Left += x;
             }
+
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -88,7 +91,7 @@ namespace Final_Project_G12
             else if (randopet == 3)
             {
                 imgPet.Image = Properties.Resources.bigSad;
-                BackColor = Color.Navy;
+                BackColor = Color.LightPink;
             }
             else if (randopet == 4)
             {
@@ -151,42 +154,14 @@ namespace Final_Project_G12
                 BackColor = Color.LightPink;
             }
 
-
-            int x = imgPet.Location.X;
-            int y = imgPet.Location.Y;
-            randoLocationNum = (locationGen.Next(30));
-
-            for (int i = 1; i < x; i++)
-            {
-                x = x + randoLocationNum;
-            }
-            for (int i = 1; i < y; i++)
-            {
-                y = y + randoLocationNum;
-            }
-
-
-
         }
 
-        private void location()
+
+        private void imgReset_Click(object sender, EventArgs e)
         {
-            int x = imgPet.Location.X;
-            int y = imgPet.Location.Y;
-            randoLocationNum = (locationGen.Next(30));
-
-            for (int i = 1; i < x; i++)
-            {
-                x = x + randoLocationNum;
-            }
-            for (int i = 1; i < y; i++)
-            {
-                y = y + randoLocationNum;
-            }
+            frmMain NewForm = new frmMain();
+            NewForm.Show();
+            Dispose(false);
         }
-
-
-
-
     }
 }
