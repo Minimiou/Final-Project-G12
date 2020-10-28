@@ -43,9 +43,11 @@
             this.imgOption3 = new System.Windows.Forms.PictureBox();
             this.imgBorder = new System.Windows.Forms.PictureBox();
             this.imgReset = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.imgHealth2 = new System.Windows.Forms.PictureBox();
+            this.imgHealth3 = new System.Windows.Forms.PictureBox();
             this.btnGame = new System.Windows.Forms.Button();
+            this.tmStatDecrease = new System.Windows.Forms.Timer(this.components);
+            this.imgHealth1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgEgg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOption1)).BeginInit();
@@ -53,8 +55,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgOption3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgBorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgReset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHealth2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHealth3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHealth1)).BeginInit();
             this.SuspendLayout();
             // 
             // probarFood
@@ -64,7 +67,6 @@
             this.probarFood.Location = new System.Drawing.Point(46, 73);
             this.probarFood.Name = "probarFood";
             this.probarFood.Size = new System.Drawing.Size(84, 23);
-            this.probarFood.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.probarFood.TabIndex = 0;
             // 
             // probarHappy
@@ -99,11 +101,12 @@
             this.btnFood.TabIndex = 3;
             this.btnFood.Text = "Food";
             this.btnFood.UseVisualStyleBackColor = false;
+            this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
             // 
             // tmEggCrack
             // 
             this.tmEggCrack.Enabled = true;
-            this.tmEggCrack.Interval = 980;
+            this.tmEggCrack.Interval = 1000;
             this.tmEggCrack.Tick += new System.EventHandler(this.tmEggCrack_Tick);
             // 
             // btnClean
@@ -144,33 +147,55 @@
             // 
             // imgOption1
             // 
-            this.imgOption1.Location = new System.Drawing.Point(46, 270);
+            this.imgOption1.BackColor = System.Drawing.Color.Transparent;
+            this.imgOption1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgOption1.Image = ((System.Drawing.Image)(resources.GetObject("imgOption1.Image")));
+            this.imgOption1.Location = new System.Drawing.Point(60, 293);
             this.imgOption1.Name = "imgOption1";
-            this.imgOption1.Size = new System.Drawing.Size(84, 50);
+            this.imgOption1.Size = new System.Drawing.Size(53, 50);
+            this.imgOption1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgOption1.TabIndex = 8;
             this.imgOption1.TabStop = false;
+            this.imgOption1.Visible = false;
+            this.imgOption1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imgOption1_MouseDown);
+            this.imgOption1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.imgOption1_MouseMove);
+            this.imgOption1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.imgOption1_MouseUp);
             // 
             // imgOption2
             // 
-            this.imgOption2.Location = new System.Drawing.Point(157, 270);
+            this.imgOption2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgOption2.Image = global::Final_Project_G12.Properties.Resources.Fish;
+            this.imgOption2.Location = new System.Drawing.Point(171, 293);
             this.imgOption2.Name = "imgOption2";
-            this.imgOption2.Size = new System.Drawing.Size(84, 50);
+            this.imgOption2.Size = new System.Drawing.Size(54, 50);
+            this.imgOption2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgOption2.TabIndex = 9;
             this.imgOption2.TabStop = false;
+            this.imgOption2.Visible = false;
+            this.imgOption2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imgOption2_MouseDown);
+            this.imgOption2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.imgOption2_MouseMove);
+            this.imgOption2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.imgOption2_MouseUp);
             // 
             // imgOption3
             // 
-            this.imgOption3.Location = new System.Drawing.Point(266, 270);
+            this.imgOption3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgOption3.Image = ((System.Drawing.Image)(resources.GetObject("imgOption3.Image")));
+            this.imgOption3.Location = new System.Drawing.Point(278, 293);
             this.imgOption3.Name = "imgOption3";
-            this.imgOption3.Size = new System.Drawing.Size(84, 50);
+            this.imgOption3.Size = new System.Drawing.Size(56, 50);
+            this.imgOption3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgOption3.TabIndex = 10;
             this.imgOption3.TabStop = false;
+            this.imgOption3.Visible = false;
+            this.imgOption3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imgOption3_MouseDown);
+            this.imgOption3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.imgOption3_MouseMove);
+            this.imgOption3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.imgOption3_MouseUp);
             // 
             // imgBorder
             // 
-            this.imgBorder.Location = new System.Drawing.Point(46, 102);
+            this.imgBorder.Location = new System.Drawing.Point(46, 116);
             this.imgBorder.Name = "imgBorder";
-            this.imgBorder.Size = new System.Drawing.Size(304, 229);
+            this.imgBorder.Size = new System.Drawing.Size(304, 169);
             this.imgBorder.TabIndex = 11;
             this.imgBorder.TabStop = false;
             // 
@@ -185,25 +210,25 @@
             this.imgReset.TabStop = false;
             this.imgReset.Click += new System.EventHandler(this.imgReset_Click);
             // 
-            // pictureBox5
+            // imgHealth2
             // 
-            this.pictureBox5.Image = global::Final_Project_G12.Properties.Resources.health;
-            this.pictureBox5.Location = new System.Drawing.Point(187, 46);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(23, 20);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
+            this.imgHealth2.Image = global::Final_Project_G12.Properties.Resources.health;
+            this.imgHealth2.Location = new System.Drawing.Point(187, 46);
+            this.imgHealth2.Name = "imgHealth2";
+            this.imgHealth2.Size = new System.Drawing.Size(23, 20);
+            this.imgHealth2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgHealth2.TabIndex = 13;
+            this.imgHealth2.TabStop = false;
             // 
-            // pictureBox6
+            // imgHealth3
             // 
-            this.pictureBox6.Image = global::Final_Project_G12.Properties.Resources.health;
-            this.pictureBox6.Location = new System.Drawing.Point(318, 46);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(23, 20);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 14;
-            this.pictureBox6.TabStop = false;
+            this.imgHealth3.Image = global::Final_Project_G12.Properties.Resources.health;
+            this.imgHealth3.Location = new System.Drawing.Point(327, 46);
+            this.imgHealth3.Name = "imgHealth3";
+            this.imgHealth3.Size = new System.Drawing.Size(23, 20);
+            this.imgHealth3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgHealth3.TabIndex = 14;
+            this.imgHealth3.TabStop = false;
             // 
             // btnGame
             // 
@@ -221,6 +246,16 @@
             this.btnGame.Text = "Games";
             this.btnGame.UseVisualStyleBackColor = false;
             // 
+            // imgHealth1
+            // 
+            this.imgHealth1.Image = global::Final_Project_G12.Properties.Resources.health;
+            this.imgHealth1.Location = new System.Drawing.Point(46, 46);
+            this.imgHealth1.Name = "imgHealth1";
+            this.imgHealth1.Size = new System.Drawing.Size(23, 20);
+            this.imgHealth1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgHealth1.TabIndex = 16;
+            this.imgHealth1.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,15 +264,16 @@
             this.BackgroundImage = global::Final_Project_G12.Properties.Resources.frame;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(397, 460);
-            this.Controls.Add(this.btnGame);
-            this.Controls.Add(this.imgPet);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.imgReset);
-            this.Controls.Add(this.imgEgg);
+            this.Controls.Add(this.imgHealth1);
             this.Controls.Add(this.imgOption3);
             this.Controls.Add(this.imgOption2);
             this.Controls.Add(this.imgOption1);
+            this.Controls.Add(this.btnGame);
+            this.Controls.Add(this.imgPet);
+            this.Controls.Add(this.imgHealth3);
+            this.Controls.Add(this.imgHealth2);
+            this.Controls.Add(this.imgReset);
+            this.Controls.Add(this.imgEgg);
             this.Controls.Add(this.imgBorder);
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnFood);
@@ -247,9 +283,11 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Virtual Pet V-0.1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgEgg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPet)).EndInit();
@@ -258,8 +296,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgOption3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgBorder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgReset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHealth2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHealth3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHealth1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -278,9 +317,11 @@
         private System.Windows.Forms.PictureBox imgOption3;
         private System.Windows.Forms.PictureBox imgBorder;
         private System.Windows.Forms.PictureBox imgReset;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox imgHealth2;
+        private System.Windows.Forms.PictureBox imgHealth3;
         private System.Windows.Forms.Button btnGame;
+        private System.Windows.Forms.Timer tmStatDecrease;
+        private System.Windows.Forms.PictureBox imgHealth1;
     }
 }
 

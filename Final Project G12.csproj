@@ -224,5 +224,23 @@
   <ItemGroup>
     <None Include="Resources\63-632891_speech-bubble-maker-empty-pixel-speech-bubble-png2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2020-10-28 10_35_14-pixel food - Google Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2020-10-28 11_32_23-Pixel Food 1 - 24x24 by AnarchisedLUTE on DeviantArt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2020-10-28 11_32_56-Pixel Food 1 - 24x24 by AnarchisedLUTE on DeviantArt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carrot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

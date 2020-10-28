@@ -103,6 +103,16 @@ namespace Final_Project_G12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Apple {
+            get {
+                object obj = ResourceManager.GetObject("Apple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap balloonBunny {
             get {
                 object obj = ResourceManager.GetObject("balloonBunny", resourceCulture);
@@ -243,6 +253,16 @@ namespace Final_Project_G12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Carrot {
+            get {
+                object obj = ResourceManager.GetObject("Carrot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap d81gicu_6be7eaf4_67be_4242_9dee_e758165a98be {
             get {
                 object obj = ResourceManager.GetObject("d81gicu_6be7eaf4_67be_4242_9dee_e758165a98be", resourceCulture);
@@ -276,6 +296,16 @@ namespace Final_Project_G12.Properties {
         internal static System.Drawing.Bitmap Firebloblarge {
             get {
                 object obj = ResourceManager.GetObject("Firebloblarge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fish {
+            get {
+                object obj = ResourceManager.GetObject("Fish", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
