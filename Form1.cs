@@ -111,12 +111,14 @@ namespace Final_Project_G12
             probarFood.Maximum = 50;
             probarFood.Step = 20;
             probarFood.Value = 0;
+
+
         }
 
 
         private void imgReset_Click(object sender, EventArgs e)
         {
-            randopet = (petGen.Next(1, 17));
+            randopet = (petGen.Next(16, 17));
 
 
 
@@ -197,7 +199,15 @@ namespace Final_Project_G12
             else if (randopet == 16)
             {
                 imgPet.Image = Properties.Resources.fushiaDragon;
-                BackColor = Color.LightPink;
+                BackColor = Color.White;
+                imgPet.SizeMode = PictureBoxSizeMode.Zoom;
+
+                // OR
+
+                //imgDragon.Visible = true;
+                //imgPet.Visible = false;
+                //imgDragon.Image = Properties.Resources.fushiaDragon;
+                //BackColor = Color.White;
             }
         }
 
@@ -217,6 +227,7 @@ namespace Final_Project_G12
             imgOption3.Enabled = true;
             imgOption3.Image = Properties.Resources.Carrot;
             imgOption3.Visible = true;
+            
         }
 
         private void imgOption1_MouseDown(object sender, MouseEventArgs e)
@@ -252,7 +263,8 @@ namespace Final_Project_G12
             imgOption1.Location = new Point(60, 293);
             if (probarFood.Value == probarFood.Maximum)
             {
-                probarFood.BackColor = Color.Red;
+                probarFood.BackColor = Color.Gold;
+                probarFood.ForeColor = Color.Red;
                 btnFood.Enabled = false;
                 imgOption1.Enabled = false;
                 imgOption2.Enabled = false;
@@ -261,11 +273,13 @@ namespace Final_Project_G12
                 imgOption2.Visible = false;
                 imgOption3.Visible = false;
                 imgHealth1.Visible = false;
+
                 String message = "You overfed your pet, it lost health! It won't let you feed it anymore :(";
                 string title = "-1 Health";
 
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 MessageBox.Show(message, title, buttons);
+                
             }
         }
 
@@ -302,7 +316,8 @@ namespace Final_Project_G12
             imgOption2.Location = new Point(171, 293);
             if (probarFood.Value == probarFood.Maximum)
             {
-                probarFood.BackColor = Color.Red;
+                probarFood.BackColor = Color.Gold;
+                probarFood.ForeColor = Color.Red;
                 btnFood.Enabled = false;
                 imgOption1.Enabled = false;
                 imgOption2.Enabled = false;
@@ -310,7 +325,8 @@ namespace Final_Project_G12
                 imgOption1.Visible = false;
                 imgOption2.Visible = false;
                 imgOption3.Visible = false;
-                imgHealth2.Visible = false;
+                imgHealth1.Visible = false;
+                btnFood.Cursor = Cursors.No;
                 String message = "You overfed your pet, it lost health! It won't let you feed it anymore :(";
                 string title = "-1 Health";
 
@@ -352,7 +368,8 @@ namespace Final_Project_G12
             imgOption3.Location = new Point(278, 293);
             if (probarFood.Value == probarFood.Maximum)
             {
-                probarFood.BackColor = Color.Red;
+                probarFood.BackColor = Color.Gold;
+                probarFood.ForeColor = Color.Red;
                 btnFood.Enabled = false;
                 imgOption1.Enabled = false;
                 imgOption2.Enabled = false;
@@ -360,12 +377,21 @@ namespace Final_Project_G12
                 imgOption1.Visible = false;
                 imgOption2.Visible = false;
                 imgOption3.Visible = false;
-                imgHealth3.Visible = false;
+                imgHealth1.Visible = false;
                 String message = "You overfed your pet, it lost health! It won't let you feed it anymore :(";
                 string title = "-1 Health";
 
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 MessageBox.Show(message, title, buttons);
+            }
+        }
+
+        private void btnFood_MouseEnter(object sender, EventArgs e)
+        {
+            //if (probarFood)
+            if (probarFood.Value == probarFood.Maximum)
+            {
+                Cursor.Current = Cursors.No;
             }
         }
     }

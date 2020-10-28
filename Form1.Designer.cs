@@ -48,6 +48,7 @@
             this.btnGame = new System.Windows.Forms.Button();
             this.tmStatDecrease = new System.Windows.Forms.Timer(this.components);
             this.imgHealth1 = new System.Windows.Forms.PictureBox();
+            this.imgDragon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgEgg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOption1)).BeginInit();
@@ -58,32 +59,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgHealth2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgHealth3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgHealth1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgDragon)).BeginInit();
             this.SuspendLayout();
             // 
             // probarFood
             // 
-            this.probarFood.BackColor = System.Drawing.Color.MidnightBlue;
+            this.probarFood.BackColor = System.Drawing.Color.AliceBlue;
             this.probarFood.ForeColor = System.Drawing.Color.Gold;
             this.probarFood.Location = new System.Drawing.Point(46, 73);
             this.probarFood.Name = "probarFood";
             this.probarFood.Size = new System.Drawing.Size(84, 23);
+            this.probarFood.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.probarFood.TabIndex = 0;
             // 
             // probarHappy
             // 
-            this.probarHappy.BackColor = System.Drawing.Color.MidnightBlue;
+            this.probarHappy.BackColor = System.Drawing.Color.AliceBlue;
             this.probarHappy.ForeColor = System.Drawing.Color.GreenYellow;
             this.probarHappy.Location = new System.Drawing.Point(157, 73);
             this.probarHappy.Name = "probarHappy";
             this.probarHappy.Size = new System.Drawing.Size(84, 23);
+            this.probarHappy.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.probarHappy.TabIndex = 1;
             // 
             // probarClean
             // 
-            this.probarClean.BackColor = System.Drawing.Color.MidnightBlue;
+            this.probarClean.BackColor = System.Drawing.Color.AliceBlue;
             this.probarClean.Location = new System.Drawing.Point(266, 73);
             this.probarClean.Name = "probarClean";
             this.probarClean.Size = new System.Drawing.Size(84, 23);
+            this.probarClean.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.probarClean.TabIndex = 2;
             // 
             // btnFood
@@ -102,6 +107,7 @@
             this.btnFood.Text = "Food";
             this.btnFood.UseVisualStyleBackColor = false;
             this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
+            this.btnFood.MouseEnter += new System.EventHandler(this.btnFood_MouseEnter);
             // 
             // tmEggCrack
             // 
@@ -138,7 +144,7 @@
             // 
             this.imgPet.BackColor = System.Drawing.Color.Transparent;
             this.imgPet.Image = global::Final_Project_G12.Properties.Resources.purpleBlob;
-            this.imgPet.Location = new System.Drawing.Point(157, 143);
+            this.imgPet.Location = new System.Drawing.Point(150, 154);
             this.imgPet.Name = "imgPet";
             this.imgPet.Size = new System.Drawing.Size(84, 90);
             this.imgPet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -256,6 +262,17 @@
             this.imgHealth1.TabIndex = 16;
             this.imgHealth1.TabStop = false;
             // 
+            // imgDragon
+            // 
+            this.imgDragon.Image = global::Final_Project_G12.Properties.Resources.fushiaDragon;
+            this.imgDragon.Location = new System.Drawing.Point(101, 154);
+            this.imgDragon.Name = "imgDragon";
+            this.imgDragon.Size = new System.Drawing.Size(190, 117);
+            this.imgDragon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgDragon.TabIndex = 17;
+            this.imgDragon.TabStop = false;
+            this.imgDragon.Visible = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,12 +281,13 @@
             this.BackgroundImage = global::Final_Project_G12.Properties.Resources.frame;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(397, 460);
+            this.Controls.Add(this.imgPet);
+            this.Controls.Add(this.imgDragon);
             this.Controls.Add(this.imgHealth1);
             this.Controls.Add(this.imgOption3);
             this.Controls.Add(this.imgOption2);
             this.Controls.Add(this.imgOption1);
             this.Controls.Add(this.btnGame);
-            this.Controls.Add(this.imgPet);
             this.Controls.Add(this.imgHealth3);
             this.Controls.Add(this.imgHealth2);
             this.Controls.Add(this.imgReset);
@@ -299,6 +317,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgHealth2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgHealth3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgHealth1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgDragon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -322,6 +341,7 @@
         private System.Windows.Forms.Button btnGame;
         private System.Windows.Forms.Timer tmStatDecrease;
         private System.Windows.Forms.PictureBox imgHealth1;
+        private System.Windows.Forms.PictureBox imgDragon;
     }
 }
 
