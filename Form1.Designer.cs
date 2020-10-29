@@ -65,11 +65,11 @@
             // probarFood
             // 
             this.probarFood.BackColor = System.Drawing.Color.AliceBlue;
-            this.probarFood.ForeColor = System.Drawing.Color.Gold;
+            this.probarFood.ForeColor = System.Drawing.Color.Orange;
             this.probarFood.Location = new System.Drawing.Point(46, 73);
             this.probarFood.Name = "probarFood";
             this.probarFood.Size = new System.Drawing.Size(84, 23);
-            this.probarFood.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.probarFood.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.probarFood.TabIndex = 0;
             // 
             // probarHappy
@@ -251,6 +251,7 @@
             this.btnGame.TabIndex = 15;
             this.btnGame.Text = "Games";
             this.btnGame.UseVisualStyleBackColor = false;
+            this.btnGame.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // imgHealth1
             // 

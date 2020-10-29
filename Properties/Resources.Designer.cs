@@ -113,6 +113,16 @@ namespace Final_Project_G12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap balloonBunny {
             get {
                 object obj = ResourceManager.GetObject("balloonBunny", resourceCulture);
@@ -253,6 +263,26 @@ namespace Final_Project_G12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Candy1 {
+            get {
+                object obj = ResourceManager.GetObject("Candy1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CandyCloud {
+            get {
+                object obj = ResourceManager.GetObject("CandyCloud", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Carrot {
             get {
                 object obj = ResourceManager.GetObject("Carrot", resourceCulture);
@@ -385,6 +415,16 @@ namespace Final_Project_G12.Properties {
         internal static System.Drawing.Bitmap panda {
             get {
                 object obj = ResourceManager.GetObject("panda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PinkCloud {
+            get {
+                object obj = ResourceManager.GetObject("PinkCloud", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

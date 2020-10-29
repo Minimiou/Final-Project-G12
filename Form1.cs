@@ -34,6 +34,7 @@ namespace Final_Project_G12
         private Random randoMovement;
 
         Point location = Point.Empty;
+        
 
 
         public frmMain()
@@ -43,7 +44,9 @@ namespace Final_Project_G12
         }
 
 
-
+        //Intro
+        //And
+        //Movement
         private void tmEggCrack_Tick(object sender, EventArgs e)
         {
             seconds++;
@@ -104,7 +107,7 @@ namespace Final_Project_G12
             imgOption1.Enabled = false;
             imgOption2.Enabled = false;
             imgOption3.Enabled = false;
-            //Color BarColor = Color.AliceBlue;
+
             food = probarFood.Step;
 
             probarFood.Minimum = 0;
@@ -118,7 +121,7 @@ namespace Final_Project_G12
 
         private void imgReset_Click(object sender, EventArgs e)
         {
-            randopet = (petGen.Next(16, 17));
+            randopet = (petGen.Next(1, 17));
 
 
 
@@ -216,6 +219,12 @@ namespace Final_Project_G12
             snd.Stop();
         }
 
+
+
+
+        //
+        //
+        //FOOD
         private void btnFood_Click(object sender, EventArgs e)
         {
             imgOption1.Enabled = true;
@@ -263,7 +272,7 @@ namespace Final_Project_G12
             imgOption1.Location = new Point(60, 293);
             if (probarFood.Value == probarFood.Maximum)
             {
-                probarFood.BackColor = Color.Gold;
+                probarFood.BackColor = Color.Orange;
                 probarFood.ForeColor = Color.Red;
                 btnFood.Enabled = false;
                 imgOption1.Enabled = false;
@@ -282,7 +291,7 @@ namespace Final_Project_G12
                 
             }
         }
-
+        
         private void imgOption2_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -316,7 +325,7 @@ namespace Final_Project_G12
             imgOption2.Location = new Point(171, 293);
             if (probarFood.Value == probarFood.Maximum)
             {
-                probarFood.BackColor = Color.Gold;
+                probarFood.BackColor = Color.Orange;
                 probarFood.ForeColor = Color.Red;
                 btnFood.Enabled = false;
                 imgOption1.Enabled = false;
@@ -368,7 +377,7 @@ namespace Final_Project_G12
             imgOption3.Location = new Point(278, 293);
             if (probarFood.Value == probarFood.Maximum)
             {
-                probarFood.BackColor = Color.Gold;
+                probarFood.BackColor = Color.Orange;
                 probarFood.ForeColor = Color.Red;
                 btnFood.Enabled = false;
                 imgOption1.Enabled = false;
@@ -386,13 +395,27 @@ namespace Final_Project_G12
             }
         }
 
+
+
+
+
         private void btnFood_MouseEnter(object sender, EventArgs e)
         {
-            //if (probarFood)
-            if (probarFood.Value == probarFood.Maximum)
-            {
-                Cursor.Current = Cursors.No;
-            }
+       
+        }
+
+
+
+        // that game where you drag a character at the bottom  and it catches falling foods
+        //GAME
+
+        private void btnGame_Click(object sender, EventArgs e)
+        {
+            frmGame miniGame = new frmGame();
+            miniGame.BackColor = this.BackColor;
+            miniGame.ShowDialog();
+            
+
         }
     }
 }
