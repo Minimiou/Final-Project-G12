@@ -266,5 +266,17 @@
   <ItemGroup>
     <None Include="Resources\Candy1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03c565b878a0ec7480a82d3b66eacbdb.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\528-5284551_animated-gif-about-cute-cute-pixel-art-cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\téléchargement %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

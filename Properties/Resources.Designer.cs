@@ -63,9 +63,29 @@ namespace Final_Project_G12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _03c565b878a0ec7480a82d3b66eacbdb {
+            get {
+                object obj = ResourceManager.GetObject("_03c565b878a0ec7480a82d3b66eacbdb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _22_226546_baroque_golden_frame_play_button_pixel_art {
             get {
                 object obj = ResourceManager.GetObject("22-226546_baroque-golden-frame-play-button-pixel-art", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _528_5284551_animated_gif_about_cute_cute_pixel_art_cloud {
+            get {
+                object obj = ResourceManager.GetObject("_528_5284551_animated_gif_about_cute_cute_pixel_art_cloud", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -501,9 +521,29 @@ namespace Final_Project_G12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap téléchargement__1_ {
+            get {
+                object obj = ResourceManager.GetObject("téléchargement__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tinySad {
             get {
                 object obj = ResourceManager.GetObject("tinySad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unnamed {
+            get {
+                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

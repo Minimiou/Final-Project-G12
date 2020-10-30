@@ -34,10 +34,14 @@
             this.tmCandyDropper = new System.Windows.Forms.Timer(this.components);
             this.imgCandy = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.imgPet = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCandy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPet)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -64,6 +68,7 @@
             // 
             // tmCandyDropper
             // 
+            this.tmCandyDropper.Enabled = true;
             this.tmCandyDropper.Tick += new System.EventHandler(this.tmCandyDropper_Tick);
             // 
             // imgCandy
@@ -88,12 +93,33 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            // 
+            // imgPet
+            // 
+            this.imgPet.BackColor = System.Drawing.Color.Transparent;
+            this.imgPet.Image = global::Final_Project_G12.Properties.Resources.purpleBlob;
+            this.imgPet.Location = new System.Drawing.Point(203, 487);
+            this.imgPet.Name = "imgPet";
+            this.imgPet.Size = new System.Drawing.Size(61, 63);
+            this.imgPet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgPet.TabIndex = 8;
+            this.imgPet.TabStop = false;
+            // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Final_Project_G12.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(449, 551);
+            this.Controls.Add(this.imgPet);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.imgCandy);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -102,10 +128,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGame";
             this.Load += new System.EventHandler(this.frmGame_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGame_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCandy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -116,5 +145,7 @@
         private System.Windows.Forms.Timer tmCandyDropper;
         private System.Windows.Forms.PictureBox imgCandy;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox imgPet;
     }
 }
