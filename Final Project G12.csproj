@@ -278,5 +278,20 @@
   <ItemGroup>
     <None Include="Resources\unnamed.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tophalf.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bottomhalf.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblr_nt6rmel9IL1ubnssto1_400.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f466c75b3fdbb134b2666cfa8f1f8e93.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

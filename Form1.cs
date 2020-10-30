@@ -17,14 +17,16 @@ namespace Final_Project_G12
     public partial class frmMain : Form
     {
         Stream str = Properties.Resources.gameAudi;
-        int randopet;
         SoundPlayer snd;
 
+        public static bool gameWin;
+
+        int randopet;
         int seconds = 1;
 
         int food;
         int cleanliness;
-
+        int times = 0;
         string hDirection = "r";
         string vDirection = "u";
         int x;
@@ -115,9 +117,33 @@ namespace Final_Project_G12
             probarFood.Step = 20;
             probarFood.Value = 0;
 
-
+            
         }
 
+
+        //protected override CreateParams CreateParams
+        //{
+        //    get
+        //    {
+        //       CreateParams cp = base.CreateParams;
+
+        //       if (cp.X == Cursor.Position.X && cp.Y == Cursor.Position.Y)
+        //       {
+        //            times ;
+        //       }
+
+                
+        //        if (times > 3)
+        //        {
+        //            const int CS_NOCLOSE = 0x200;
+
+                    
+        //            cp.ClassStyle |= CS_NOCLOSE;
+                    
+        //        }
+        //        return cp;
+        //    }
+        //}
 
         private void imgReset_Click(object sender, EventArgs e)
         {
@@ -216,6 +242,7 @@ namespace Final_Project_G12
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
+
             snd.Stop();
         }
 
@@ -411,10 +438,30 @@ namespace Final_Project_G12
 
         private void btnGame_Click(object sender, EventArgs e)
         {
+            bool result;
             frmGame miniGame = new frmGame();
             miniGame.BackColor = this.BackColor;
             miniGame.ShowDialog();
+          
             
+            if (frmMain.gameWin == true)
+            {
+                probarHappy.Value = 100;
+                btnGame.Enabled = false;
+                MessageBox.Show("Your pet played a lot and is now happy but dirty!");
+            }
+            else
+            {
+                imgHealth2.Visible = false;
+                MessageBox.Show("Your pet is sad and dirty!");
+            }
+
+          
+
+
+
+
+
 
         }
     }

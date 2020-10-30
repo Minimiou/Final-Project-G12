@@ -57,5 +57,10 @@ namespace Final_Project_G12
         {
             Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

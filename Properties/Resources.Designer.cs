@@ -83,16 +83,6 @@ namespace Final_Project_G12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _528_5284551_animated_gif_about_cute_cute_pixel_art_cloud {
-            get {
-                object obj = ResourceManager.GetObject("_528_5284551_animated_gif_about_cute_cute_pixel_art_cloud", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _63_632891_speech_bubble_maker_empty_pixel_speech_bubble_png {
             get {
                 object obj = ResourceManager.GetObject("63-632891_speech-bubble-maker-empty-pixel-speech-bubble-png", resourceCulture);
@@ -106,16 +96,6 @@ namespace Final_Project_G12.Properties {
         internal static System.Drawing.Bitmap _644014_pennilessragamuffin_strawberry_pixel_cake {
             get {
                 object obj = ResourceManager.GetObject("_644014_pennilessragamuffin_strawberry_pixel_cake", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap a99e419272b53630b5d5b178188a8900 {
-            get {
-                object obj = ResourceManager.GetObject("a99e419272b53630b5d5b178188a8900", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,6 +253,16 @@ namespace Final_Project_G12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bottomhalf {
+            get {
+                object obj = ResourceManager.GetObject("bottomhalf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_frame {
             get {
                 object obj = ResourceManager.GetObject("button_frame", resourceCulture);
@@ -296,6 +286,16 @@ namespace Final_Project_G12.Properties {
         internal static System.Drawing.Bitmap CandyCloud {
             get {
                 object obj = ResourceManager.GetObject("CandyCloud", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Candyhealth {
+            get {
+                object obj = ResourceManager.GetObject("Candyhealth", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -386,6 +386,16 @@ namespace Final_Project_G12.Properties {
         internal static System.IO.UnmanagedMemoryStream gameAudi {
             get {
                 return ResourceManager.GetStream("gameAudi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gameover {
+            get {
+                object obj = ResourceManager.GetObject("gameover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -534,6 +544,26 @@ namespace Final_Project_G12.Properties {
         internal static System.Drawing.Bitmap tinySad {
             get {
                 object obj = ResourceManager.GetObject("tinySad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tophalf {
+            get {
+                object obj = ResourceManager.GetObject("tophalf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblr_nt6rmel9IL1ubnssto1_400 {
+            get {
+                object obj = ResourceManager.GetObject("tumblr_nt6rmel9IL1ubnssto1_400", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
