@@ -47,6 +47,10 @@
             this.imgEnd = new System.Windows.Forms.PictureBox();
             this.lblEnd = new System.Windows.Forms.Label();
             this.tmEnd = new System.Windows.Forms.Timer(this.components);
+            this.imgGlitch1 = new System.Windows.Forms.PictureBox();
+            this.imgGlitch2 = new System.Windows.Forms.PictureBox();
+            this.imgGlitch3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCandy)).BeginInit();
@@ -61,6 +65,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgHealth2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgHealth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgEnd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGlitch1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGlitch2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGlitch3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -126,7 +134,7 @@
             // lblScore
             // 
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblScore.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.Color.White;
             this.lblScore.Location = new System.Drawing.Point(-5, -2);
             this.lblScore.Name = "lblScore";
@@ -226,9 +234,9 @@
             // 
             this.imgEnd.BackgroundImage = global::Final_Project_G12.Properties.Resources.tumblr_nt6rmel9IL1ubnssto1_400;
             this.imgEnd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.imgEnd.Location = new System.Drawing.Point(-1, -1);
+            this.imgEnd.Location = new System.Drawing.Point(-1, -9);
             this.imgEnd.Name = "imgEnd";
-            this.imgEnd.Size = new System.Drawing.Size(452, 553);
+            this.imgEnd.Size = new System.Drawing.Size(452, 561);
             this.imgEnd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgEnd.TabIndex = 20;
             this.imgEnd.TabStop = false;
@@ -237,7 +245,7 @@
             // lblEnd
             // 
             this.lblEnd.BackColor = System.Drawing.SystemColors.Control;
-            this.lblEnd.Font = new System.Drawing.Font("Pristina", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnd.ForeColor = System.Drawing.Color.Plum;
             this.lblEnd.Location = new System.Drawing.Point(131, 472);
             this.lblEnd.Name = "lblEnd";
@@ -250,6 +258,50 @@
             // 
             this.tmEnd.Interval = 1000;
             this.tmEnd.Tick += new System.EventHandler(this.tmEnd_Tick);
+            // 
+            // imgGlitch1
+            // 
+            this.imgGlitch1.BackColor = System.Drawing.Color.Transparent;
+            this.imgGlitch1.Image = global::Final_Project_G12.Properties.Resources.glitch;
+            this.imgGlitch1.Location = new System.Drawing.Point(166, 312);
+            this.imgGlitch1.Name = "imgGlitch1";
+            this.imgGlitch1.Size = new System.Drawing.Size(62, 53);
+            this.imgGlitch1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgGlitch1.TabIndex = 22;
+            this.imgGlitch1.TabStop = false;
+            // 
+            // imgGlitch2
+            // 
+            this.imgGlitch2.BackColor = System.Drawing.Color.Transparent;
+            this.imgGlitch2.Image = global::Final_Project_G12.Properties.Resources.glitch2;
+            this.imgGlitch2.Location = new System.Drawing.Point(76, 327);
+            this.imgGlitch2.Name = "imgGlitch2";
+            this.imgGlitch2.Size = new System.Drawing.Size(61, 82);
+            this.imgGlitch2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgGlitch2.TabIndex = 23;
+            this.imgGlitch2.TabStop = false;
+            // 
+            // imgGlitch3
+            // 
+            this.imgGlitch3.BackColor = System.Drawing.Color.Transparent;
+            this.imgGlitch3.Image = global::Final_Project_G12.Properties.Resources.glitch2;
+            this.imgGlitch3.Location = new System.Drawing.Point(348, 327);
+            this.imgGlitch3.Name = "imgGlitch3";
+            this.imgGlitch3.Size = new System.Drawing.Size(85, 38);
+            this.imgGlitch3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgGlitch3.TabIndex = 24;
+            this.imgGlitch3.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = global::Final_Project_G12.Properties.Resources.unnamed;
+            this.pictureBox7.Location = new System.Drawing.Point(7, 31);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(99, 69);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 25;
+            this.pictureBox7.TabStop = false;
             // 
             // frmGame
             // 
@@ -270,9 +322,13 @@
             this.Controls.Add(this.imgCandy3);
             this.Controls.Add(this.imgCandy2);
             this.Controls.Add(this.imgCandy);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.imgGlitch2);
+            this.Controls.Add(this.imgGlitch1);
+            this.Controls.Add(this.imgGlitch3);
             this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox4);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "frmGame";
@@ -294,6 +350,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgHealth2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgHealth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgEnd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGlitch1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGlitch2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGlitch3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,5 +377,9 @@
         private System.Windows.Forms.PictureBox imgEnd;
         private System.Windows.Forms.Label lblEnd;
         private System.Windows.Forms.Timer tmEnd;
+        private System.Windows.Forms.PictureBox imgGlitch1;
+        private System.Windows.Forms.PictureBox imgGlitch2;
+        private System.Windows.Forms.PictureBox imgGlitch3;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

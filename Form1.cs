@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System;  
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,20 +6,23 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Media;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//https://www.codeproject.com/Questions/639545/How-to-drag-a-picture-box-on-winForms-at-runtime-i
-//https://www.reddit.com/r/csharp/comments/4f6pje/how_do_you_make_a_hp_bar/
 
 namespace Final_Project_G12
 {
     public partial class frmMain : Form
     {
         Stream str = Properties.Resources.gameAudi;
+        Stream buttonNoise = Properties.Resources.bleep1;
+        Stream petNoise = Properties.Resources.bleep2;
+
         SoundPlayer snd;
 
         public static bool gameWin;
+        public static bool petCleaned;
 
         int randopet;
         int seconds = 1;
@@ -36,7 +39,7 @@ namespace Final_Project_G12
         private Random randoMovement;
 
         Point location = Point.Empty;
-        
+
 
 
         public frmMain()
@@ -96,13 +99,33 @@ namespace Final_Project_G12
             {
                 vDirection = "u";
             }
+            if (imgHealth1.Visible == false && imgHealth2.Visible == false && imgHealth3.Visible == false)
+            {
+                tmEggCrack.Enabled = false;
+                String message = "Your pet just died...That's sad... :)";
+                string title = "OOF GameOver";
 
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, title, buttons);
+                Close();
+            }
+            if (probarClean.Value == 100 && probarHappy.Value == 100 && probarFood.Value == 50)
+            {
+                tmEggCrack.Enabled = false;
+                String message = "Your pet got bored and is now leaving...That's sad... :)";
+                string title = "Good Job?";
+
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, title, buttons);
+                Close();
+            }
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
             snd = new SoundPlayer(str);
             snd.PlayLooping();
+
 
             randoMovement = new Random();
 
@@ -111,45 +134,28 @@ namespace Final_Project_G12
             imgOption3.Enabled = false;
 
             food = probarFood.Step;
+            cleanliness = probarFood.Step;
 
             probarFood.Minimum = 0;
             probarFood.Maximum = 50;
             probarFood.Step = 20;
             probarFood.Value = 0;
 
+            probarClean.Minimum = 0;
+            probarClean.Maximum = 100;
+            probarClean.Step = 25;
+            probarClean.Value = 100;
+
+            btnClean.Enabled = false;
+            frmClean.petClean = imgPet.Image;
+
             
         }
 
 
-        //protected override CreateParams CreateParams
-        //{
-        //    get
-        //    {
-        //       CreateParams cp = base.CreateParams;
-
-        //       if (cp.X == Cursor.Position.X && cp.Y == Cursor.Position.Y)
-        //       {
-        //            times ;
-        //       }
-
-                
-        //        if (times > 3)
-        //        {
-        //            const int CS_NOCLOSE = 0x200;
-
-                    
-        //            cp.ClassStyle |= CS_NOCLOSE;
-                    
-        //        }
-        //        return cp;
-        //    }
-        //}
-
         private void imgReset_Click(object sender, EventArgs e)
         {
             randopet = (petGen.Next(1, 17));
-
-
 
             if (randopet == 1)
             {
@@ -230,19 +236,30 @@ namespace Final_Project_G12
                 imgPet.Image = Properties.Resources.fushiaDragon;
                 BackColor = Color.White;
                 imgPet.SizeMode = PictureBoxSizeMode.Zoom;
-
-                // OR
-
-                //imgDragon.Visible = true;
-                //imgPet.Visible = false;
-                //imgDragon.Image = Properties.Resources.fushiaDragon;
-                //BackColor = Color.White;
             }
+            frmClean.petClean = imgPet.Image;
+            imgOption1.Enabled = false;
+            imgOption2.Enabled = false;
+            imgOption3.Enabled = false;
+
+            food = probarFood.Step;
+
+
+            probarFood.Value = 0;
+            btnFood.Enabled = true;
+            imgHealth1.Visible = true;
+            imgHealth2.Visible = true;
+            imgHealth3.Visible = true;
+            probarHappy.Value = 0;
+            btnGame.Enabled = true;
+            probarFood.BackColor = Color.AliceBlue;
+            probarFood.ForeColor = Color.Orange;
+            probarClean.Value = 100;
+            btnClean.Enabled = false;
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-
             snd.Stop();
         }
 
@@ -442,27 +459,56 @@ namespace Final_Project_G12
             frmGame miniGame = new frmGame();
             miniGame.BackColor = this.BackColor;
             miniGame.ShowDialog();
-          
-            
+
             if (frmMain.gameWin == true)
             {
-                probarHappy.Value = 100;
+                
                 btnGame.Enabled = false;
                 MessageBox.Show("Your pet played a lot and is now happy but dirty!");
+                probarClean.Value = 25;
+                btnClean.Enabled = true;
+                probarHappy.Value = 100;
             }
             else
             {
                 imgHealth2.Visible = false;
-                MessageBox.Show("Your pet is sad and dirty!");
+                String message = "Your pet is sad and dirty!";
+                string title = "-1 Health";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, title, buttons);
+                probarClean.Value = 25;
+                btnClean.Enabled = true;
             }
+        }
 
-          
+        private void btnFood_MouseDown(object sender, MouseEventArgs e)
+        {
 
+        }
 
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            bool result2;
+            frmClean petCleaning = new frmClean();
+            petCleaning.BackColor = this.BackColor;
+            petCleaning.ShowDialog();
 
-
-
-
+            if (frmMain.petCleaned == true)
+            {
+                MessageBox.Show("Your pet is clean and happy!");
+                probarClean.Value = 100;
+                btnClean.Enabled = false;
+            }
+            else
+            {
+                imgHealth3.Visible = false;
+                String message = "Your pet is sad and dirty!";
+                string title = "-1 Health";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, title, buttons);
+                probarClean.Value = 0;
+                btnClean.Enabled = true;
+            }
         }
     }
 }

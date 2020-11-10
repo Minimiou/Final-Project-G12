@@ -107,6 +107,7 @@
             this.btnFood.Text = "Food";
             this.btnFood.UseVisualStyleBackColor = false;
             this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
+            this.btnFood.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnFood_MouseDown);
             this.btnFood.MouseEnter += new System.EventHandler(this.btnFood_MouseEnter);
             // 
             // tmEggCrack
@@ -129,11 +130,12 @@
             this.btnClean.TabIndex = 5;
             this.btnClean.Text = "Clean";
             this.btnClean.UseVisualStyleBackColor = false;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // imgEgg
             // 
             this.imgEgg.Image = global::Final_Project_G12.Properties.Resources.egg;
-            this.imgEgg.Location = new System.Drawing.Point(371, -1);
+            this.imgEgg.Location = new System.Drawing.Point(-2, -2);
             this.imgEgg.Name = "imgEgg";
             this.imgEgg.Size = new System.Drawing.Size(402, 468);
             this.imgEgg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -282,6 +284,7 @@
             this.BackgroundImage = global::Final_Project_G12.Properties.Resources.frame;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(397, 460);
+            this.Controls.Add(this.imgEgg);
             this.Controls.Add(this.imgPet);
             this.Controls.Add(this.imgDragon);
             this.Controls.Add(this.imgHealth1);
@@ -292,7 +295,6 @@
             this.Controls.Add(this.imgHealth3);
             this.Controls.Add(this.imgHealth2);
             this.Controls.Add(this.imgReset);
-            this.Controls.Add(this.imgEgg);
             this.Controls.Add(this.imgBorder);
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnFood);
@@ -305,7 +307,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Virtual Pet V-0.1";
+            this.Text = "                      Virtual Pet V-0.1     ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgEgg)).EndInit();
